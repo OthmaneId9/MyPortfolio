@@ -36,7 +36,7 @@
             <div class="about-text">
                 <p>My journey into cybersecurity started with a strong interest in understanding how digital systems work and how to protect them. While studying at Al Akhawayn University, I joined The White Hats cybersecurity club, where I participated in CTF (Capture the Flag) challenges and beginner-level trainings that introduced me to key topics such as ethical hacking, cryptography, and system vulnerabilities.</p>
                 <p>I have gained valuable hands-on experience as an IT Support Specialist at Al Akhawayn University, where I've been working part-time for 1.5 years. In this role, I efficiently handle technical issues, troubleshoot problems, and maintain hardware for optimal performance. With strong communication skills, I engage effectively with students, faculty, and staff, ensuring prompt resolution of IT-related concerns.</p>
-                <p>Although I later decided to pause my studies and plan a transition to a new school starting in September, I've continued to pursue my passion independently. I'm currently working on the IBM Cybersecurity Analyst Certification and have completed 7 out of 14 courses, covering essential skills like threat intelligence, network defense, and incident response. I remain committed to building a career in cybersecurity and gaining both the technical and practical experience needed to succeed in the field.</p>
+                <p>Although I later decided to pause my studies and plan a transition to a new school starting in September, I've continued to pursue my passion independently. I'm currently working on the IBM Cybersecurity Analyst Certification and have completed 8 out of 14 courses, covering essential skills like threat intelligence, network defense, and incident response. I remain committed to building a career in cybersecurity and gaining both the technical and practical experience needed to succeed in the field.</p>
             </div>
         </div>
     </section>
@@ -240,7 +240,7 @@
             <div class="achievement-card ibm-cert">
                 <i class="fas fa-shield-virus"></i>
                 <h3>IBM Cybersecurity Analyst</h3>
-                <p>In Progress - 7/14 Courses Completed</p>
+                <p>In Progress - 8/14 Courses Completed</p>
                 <div class="cert-list">
                     <a href="https://www.coursera.org/account/accomplishments/verify/UFN0OEH8YSXB" target="_blank">
                         <i class="fas fa-check-circle"></i> Introduction to Cybersecurity Essentials
@@ -262,6 +262,9 @@
                     </a>
                     <a href="https://www.coursera.org/account/accomplishments/verify/WO77V1JNE8QP" target="_blank">
                         <i class="fas fa-check-circle"></i> Cybersecurity Architecture
+                    </a>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/CLPSB5347COS" target="_blank">
+                        <i class="fas fa-check-circle"></i> Cybersecurity Compliance Framework, Standards & Regulations
                     </a>
                 </div>
                 <span class="date">In Progress</span>
@@ -298,7 +301,7 @@
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
         <div class="contact-content">
-            <p class="contact-note">Feel free to reach out to me at <a href="mailto:othman.idrissi404@gmail.com">othman.idrissi404@gmail.com</a></p>
+            <p class="contact-note" style="color: black;">Feel free to reach out to me at <a href="mailto:othman.idrissi404@gmail.com" style="color: black;">othman.idrissi404@gmail.com</a></p>
             <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -326,5 +329,50 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Add EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init("hthZf52XcUwTCyY-H");
+        })();
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Show loading state
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Send email using EmailJS
+            emailjs.send("service_pcz2j9w", "template_mm2zh8k", {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: "othman.idrissi404@gmail.com"
+            })
+            .then(function(response) {
+                alert("Message sent successfully! I'll get back to you soon.");
+                document.getElementById('contact-form').reset();
+            })
+            .catch(function(error) {
+                alert("Failed to send message. Please try again or email me directly at othman.idrissi404@gmail.com");
+                console.error("Error:", error);
+            })
+            .finally(function() {
+                // Reset button state
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+    </script>
 </body>
 </html> 
