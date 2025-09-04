@@ -266,6 +266,45 @@ section h2::after {
     margin-left: 0.5rem;
 }
 
+/* Certification images inside achievement cards */
+.achievement-card .cert-image {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.achievement-card .cert-image-wrapper {
+    position: relative;
+}
+
+.achievement-card .cert-image-link {
+    display: block;
+    position: relative;
+}
+
+.achievement-card .overlay-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.2s ease-in-out;
+}
+
+.achievement-card .cert-image-link:hover .overlay-badge,
+.achievement-card .cert-image-link:focus .overlay-badge {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Skills Section */
 .skills {
     padding: 5rem 2rem;
