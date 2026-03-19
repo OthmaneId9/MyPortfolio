@@ -3,566 +3,556 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Othmane Idrissi – IT & Cybersecurity Student</title>
-
+  <title>Othmane Idrissi — Cybersecurity Analyst</title>
   <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ================= HEADER ================= -->
+
+  <!-- MATRIX CANVAS BACKGROUND -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- SCAN LINE OVERLAY -->
+  <div class="scanlines"></div>
+
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <nav class="nav">
-      <div class="logo">Othmane Idrissi</div>
+      <div class="logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-name">OTHMANE.IDRISSI</span>
+        <span class="logo-bracket">]</span>
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home"><span class="nav-num">01.</span> Home</a></li>
+        <li><a href="#about"><span class="nav-num">02.</span> About</a></li>
+        <li><a href="#experience"><span class="nav-num">03.</span> Experience</a></li>
+        <li><a href="#achievements"><span class="nav-num">04.</span> Certs</a></li>
+        <li><a href="#skills"><span class="nav-num">05.</span> Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </header>
 
-  <!-- ================= HERO ================= -->
+  <!-- ===== HERO ===== -->
   <section id="home" class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-kicker">IT & Cybersecurity Student</p>
-      <h1>Building secure and reliable IT systems.</h1>
+      <div class="terminal-line">
+        <span class="terminal-prompt">root@portfolio:~$</span>
+        <span class="terminal-cmd" id="typed-cmd"></span>
+        <span class="terminal-cursor">_</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-sub">Securing</span>
+        <span class="hero-title-main">Digital Infrastructure</span>
+      </h1>
       <p class="hero-subtitle">
-        DEC student in Computer Science – Network Infrastructure and Security,
-        combining hands‑on IT support with cybersecurity training to protect
-        users, networks, and data.
+        DEC Student · Network Infrastructure &amp; Security · IT Support Specialist<br>
+        <span class="hero-highlight">IBM &amp; Google Certified Cybersecurity Analyst</span>
       </p>
+      <div class="hero-stats">
+        <div class="stat-block">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat-block">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat-block">
+          <span class="stat-num">CTF</span>
+          <span class="stat-label">Competitor</span>
+        </div>
+      </div>
       <div class="hero-actions">
         <a href="#experience" class="btn btn-primary">
-          View Experience
+          <i class="fas fa-terminal"></i> View Experience
         </a>
         <a href="#contact" class="btn btn-outline">
-          Contact Me
+          <i class="fas fa-satellite-dish"></i> Contact Me
         </a>
       </div>
-      <p class="last-updated">
-        Last updated: December 2025 · Open to internships in IT support and cybersecurity.
+      <p class="hero-status">
+        <span class="status-dot"></span>
+        Open to internships in IT Support &amp; Cybersecurity · Dec 2025
       </p>
+    </div>
+    <div class="hero-visual">
+      <div class="hex-shield">
+        <div class="hex-inner">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <div class="hex-ring ring-1"></div>
+        <div class="hex-ring ring-2"></div>
+        <div class="hex-ring ring-3"></div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
+  <!-- ===== ABOUT ===== -->
   <section id="about" class="about section">
     <div class="section-inner">
-      <h2>About Me</h2>
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2>About Me</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="about-layout">
         <div class="about-text">
           <p>
-            I am passionate about cybersecurity and committed to becoming a
-            skilled cybersecurity analyst. Currently, I am pursuing a
-            <strong>Diplôme d'études collégiales (DEC) in Computer Science – Network
-            Infrastructure and Security</strong> at Collège de Maisonneuve, where I work
-            with operating systems, networking, virtualization, and security concepts.
+            I am passionate about cybersecurity and committed to becoming a skilled cybersecurity analyst. Currently pursuing a
+            <strong>Diplôme d'études collégiales (DEC) in Computer Science – Network Infrastructure and Security</strong>
+            at Collège de Maisonneuve, where I work with operating systems, networking, virtualization, and security concepts.
           </p>
           <p>
-            My hands‑on experience as an IT Support Specialist has given me strong
-            foundations in troubleshooting, system maintenance, and user support.
-            This background helps me understand both the operational needs of IT
-            systems and the importance of securing them against threats.
+            My hands-on experience as an IT Support Specialist has given me strong foundations in troubleshooting, system maintenance, and user support — helping me understand both the operational needs of IT systems and the critical importance of securing them against modern threats.
           </p>
           <p>
-            My main areas of focus include network security, basic threat analysis,
-            vulnerability management, and incident response fundamentals. By
-            combining my IT support background with cybersecurity practices, I aim
-            to help organizations protect their infrastructure and sensitive data.
-          </p>
-          <p>
-            I enjoy learning through labs, CTF competitions, and real‑world
-            experience, and I am always eager to collaborate with students and
-            professionals in the field.
+            Core focus areas include network security, threat analysis, vulnerability management, and incident response fundamentals. I enjoy learning through labs, CTF competitions, and real-world experience, and I'm always eager to collaborate with professionals in the field.
           </p>
         </div>
-
         <div class="about-highlights">
-          <h3>Profile Snapshot</h3>
-          <ul>
-            <li>DEC in Computer Science – Network Infrastructure and Security (in progress).</li>
-            <li>Experience in university IT support and professional environments.</li>
-            <li>Hands‑on work with Windows, Linux, networks, and hardware.</li>
-            <li>Active learner in cybersecurity, CTFs, and online professional certificates.</li>
-          </ul>
-
-          <h3>Career Goals</h3>
-          <ul>
-            <li>Short‑term: secure an internship / junior role in IT support or security.</li>
-            <li>Long‑term: grow into a cybersecurity analyst focusing on network and infrastructure security.</li>
-          </ul>
+          <div class="highlight-block">
+            <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h4>Education</h4>
+              <p>DEC — Computer Science, Network Infrastructure &amp; Security (In Progress)<br>
+              Collège de Maisonneuve, Montreal</p>
+            </div>
+          </div>
+          <div class="highlight-block">
+            <div class="highlight-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>Montreal, QC, Canada</p>
+            </div>
+          </div>
+          <div class="highlight-block">
+            <div class="highlight-icon"><i class="fas fa-bullseye"></i></div>
+            <div>
+              <h4>Career Goal</h4>
+              <p>Junior Cybersecurity Analyst · Network Security · Infrastructure Protection</p>
+            </div>
+          </div>
+          <div class="highlight-block">
+            <div class="highlight-icon"><i class="fas fa-flag"></i></div>
+            <div>
+              <h4>Activities</h4>
+              <p>CTF Competitions · Cybersecurity Research · Online Certs</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= EXPERIENCE ================= -->
+  <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="experience section">
     <div class="section-inner">
-      <h2>Experience</h2>
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2>Experience</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
 
-      <div class="experience-grid">
-
-        <!-- SIGMA 3A -->
-        <article class="experience-card">
-          <div class="experience-header">
+        <div class="timeline-item">
+          <div class="timeline-marker">
             <i class="fas fa-server"></i>
-            <div class="experience-title">
-              <h3>IT Support Specialist</h3>
-              <p class="company">SIGMA 3A</p>
-              <p class="duration">
-                Full‑time · July 2025 – Present · Harhoura, Rabat‑Salé‑Kénitra, Morocco · On‑site
-              </p>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <div>
+                <h3>IT Support Specialist</h3>
+                <p class="company"><i class="fas fa-building"></i> SIGMA 3A</p>
+              </div>
+              <span class="tcard-date">Jul 2025 – Present</span>
+            </div>
+            <p class="tcard-location"><i class="fas fa-location-dot"></i> Harhoura, Rabat-Salé-Kénitra, Morocco · Full-time · On-site</p>
+            <ul class="tcard-list">
+              <li>Provide comprehensive on-site IT support for staff and business operations.</li>
+              <li>Troubleshoot hardware, software, and network issues to ensure business continuity.</li>
+              <li>Maintain and upgrade workstations and peripherals as needed.</li>
+              <li>Collaborate with teams to implement and document technology solutions.</li>
+            </ul>
+            <div class="tcard-tags">
+              <span>IT Support</span><span>Networking</span><span>Hardware</span><span>Documentation</span>
             </div>
           </div>
-          <div class="experience-content">
-            <div class="experience-details">
-              <ul>
-                <li>Provide comprehensive on‑site IT support for staff and business operations.</li>
-                <li>Troubleshoot hardware, software, and network issues to ensure business continuity.</li>
-                <li>Maintain and upgrade workstations and peripherals as needed.</li>
-                <li>Collaborate with teams to implement and document technology solutions.</li>
-              </ul>
-            </div>
-            <div class="experience-image">
-              <img
-                src="images/MyWorkspaceatSIGMA3A.jpeg"
-                alt="Workspace at SIGMA 3A"
-                class="experience-img"
-              />
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!-- O-TECH -->
-        <article class="experience-card">
-          <div class="experience-header">
+        <div class="timeline-item">
+          <div class="timeline-marker">
             <i class="fas fa-laptop"></i>
-            <div class="experience-title">
-              <h3>Owner – Independent Computer Sales & Refurbishing</h3>
-              <p class="company">O‑TECH</p>
-              <p class="duration">
-                Part‑time · September 2023 – July 2025 · Rabat, Morocco
-              </p>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <div>
+                <h3>Owner — Computer Sales &amp; Refurbishing</h3>
+                <p class="company"><i class="fas fa-store"></i> O-TECH</p>
+              </div>
+              <span class="tcard-date">Sep 2023 – Jul 2025</span>
+            </div>
+            <p class="tcard-location"><i class="fas fa-location-dot"></i> Rabat, Morocco · Part-time</p>
+            <ul class="tcard-list">
+              <li>Specialized in buying, refurbishing, and reselling enterprise-grade laptops and PCs.</li>
+              <li>Performed diagnostics, repairs, OS installation, and performance optimization.</li>
+              <li>Managed client communication and listings through online platforms.</li>
+              <li>Developed strong hardware evaluation and small-business operational skills.</li>
+            </ul>
+            <div class="tcard-tags">
+              <span>Hardware</span><span>Diagnostics</span><span>OS Deploy</span><span>Business</span>
             </div>
           </div>
-          <div class="experience-content">
-            <div class="experience-details">
-              <ul>
-                <li>Specialized in buying, refurbishing, and reselling enterprise‑grade laptops and PCs.</li>
-                <li>Performed diagnostics, repairs, OS installation, and performance optimization.</li>
-                <li>Managed listings and client communication through online platforms.</li>
-                <li>Developed strong skills in hardware evaluation and small‑business operations.</li>
-              </ul>
-            </div>
-            <div class="experience-gallery two-wide">
-              <div class="gallery-item">
-                <img
-                  src="images/laptop2.jpg"
-                  alt="Dell Latitude 5410 refurbished laptop"
-                  class="gallery-img"
-                />
-                <div class="gallery-overlay">
-                  <p>Dell Latitude 5410 – Setup</p>
-                </div>
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="images/laptop3.jpg"
-                  alt="Dell Latitude 5410 on desk"
-                  class="gallery-img"
-                />
-                <div class="gallery-overlay">
-                  <p>Dell Latitude 5410 – Workspace</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!-- AUI IT SUPPORT -->
-        <article class="experience-card">
-          <div class="experience-header">
-            <i class="fas fa-laptop-medical"></i>
-            <div class="experience-title">
-              <h3>IT Support Specialist (Student Job)</h3>
-              <p class="company">Al Akhawayn University</p>
-              <p class="duration">
-                Part‑time · September 2023 – December 2024 · Ifrane, Morocco
-              </p>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <div>
+                <h3>IT Support Specialist (Student Job)</h3>
+                <p class="company"><i class="fas fa-school"></i> Al Akhawayn University</p>
+              </div>
+              <span class="tcard-date">Sep 2023 – Dec 2024</span>
+            </div>
+            <p class="tcard-location"><i class="fas fa-location-dot"></i> Ifrane, Morocco · Part-time</p>
+            <ul class="tcard-list">
+              <li>Handled technical issues in computer labs, classrooms, and offices.</li>
+              <li>Maintained hardware and peripherals for optimal performance.</li>
+              <li>Engaged with students, faculty, and staff to resolve IT incidents promptly.</li>
+              <li>Documented common problems and solutions to improve support efficiency.</li>
+            </ul>
+            <div class="tcard-tags">
+              <span>User Support</span><span>Lab Maintenance</span><span>Incident Response</span>
             </div>
           </div>
-          <div class="experience-content">
-            <div class="experience-details">
-              <ul>
-                <li>Handled technical issues in computer labs, classrooms, and offices.</li>
-                <li>Maintained hardware and peripherals for optimal performance.</li>
-                <li>Engaged with students, faculty, and staff to resolve IT incidents.</li>
-                <li>Documented common problems and solutions to improve support efficiency.</li>
-              </ul>
-            </div>
-            <div class="experience-gallery two-wide">
-              <div class="gallery-item">
-                <img
-                  src="images/office2.jpeg"
-                  alt="Working on technical support at AUI"
-                  class="gallery-img"
-                />
-                <div class="gallery-overlay">
-                  <p>Hands‑on Technical Support</p>
-                </div>
-              </div>
-              <div class="gallery-item">
-                <img
-                  src="images/office3.jpeg"
-                  alt="Team collaboration at AUI"
-                  class="gallery-img"
-                />
-                <div class="gallery-overlay">
-                  <p>Team Collaboration</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <!-- MASTERCLASS ASSISTANT -->
-        <article class="experience-card">
-          <div class="experience-header">
-            <i class="fas fa-shield-alt"></i>
-            <div class="experience-title">
-              <h3>Masterclass Assistant – Cybersecurity</h3>
-              <p class="company">The White Hats Committee (WhiteOps)</p>
-              <p class="duration">
-                September 2023 – December 2023 · Ifrane, Morocco
-              </p>
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-header">
+              <div>
+                <h3>Masterclass Assistant — Cybersecurity</h3>
+                <p class="company"><i class="fas fa-hat-wizard"></i> The White Hats Committee (WhiteOps)</p>
+              </div>
+              <span class="tcard-date">Sep 2023 – Dec 2023</span>
+            </div>
+            <p class="tcard-location"><i class="fas fa-location-dot"></i> Al Akhawayn University, Ifrane</p>
+            <ul class="tcard-list">
+              <li>Helped deliver introductory cybersecurity masterclasses to students.</li>
+              <li>Prepared students for Capture the Flag (CTF) competitions.</li>
+              <li>Explained core cybersecurity concepts, tools, and CTF methodologies.</li>
+              <li>Provided guidance and support during hands-on labs and exercises.</li>
+            </ul>
+            <div class="tcard-tags">
+              <span>CTF</span><span>Teaching</span><span>Cybersecurity</span><span>Labs</span>
             </div>
           </div>
-          <div class="experience-content">
-            <div class="experience-details">
-              <ul>
-                <li>Helped deliver introductory cybersecurity masterclasses to students.</li>
-                <li>Prepared students for Capture the Flag (CTF) competitions.</li>
-                <li>Explained core cybersecurity concepts, tools, and CTF methodologies.</li>
-                <li>Provided guidance and support during exercises and labs.</li>
-              </ul>
-            </div>
-            <div class="experience-image">
-              <img
-                src="images/masterclass1.jpeg"
-                alt="Cybersecurity masterclass session"
-                class="experience-img"
-              />
-            </div>
-          </div>
-        </article>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ================= ACHIEVEMENTS ================= -->
+  <!-- ===== ACHIEVEMENTS ===== -->
   <section id="achievements" class="achievements section">
     <div class="section-inner">
-      <h2>Achievements & Certifications</h2>
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2>Certifications &amp; Achievements</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="achievements-grid">
 
-        <!-- CTF -->
         <article class="achievement-card">
-          <i class="fas fa-certificate"></i>
-          <h3>CTF Hacking Competition – Beginners</h3>
-          <p>1337 Coding School & Al Akhawayn University · 2023</p>
-          <span class="date">November 2023</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://drive.google.com/file/d/1aViwyibVDMZwHekpOjFMVSbdxt6ZDgm5/view?usp=sharing"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View CTF certificate"
-            >
-              <img
-                src="images/2023 CTF Hacking Competition - Beginners.jpg"
-                alt="CTF Hacking Competition - Beginners"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-shield-virus"></i></div>
+            <span class="acard-badge">Professional Cert</span>
+          </div>
+          <h3>IBM Cybersecurity Analyst</h3>
+          <p class="acard-issuer">IBM · Coursera · 14 Courses</p>
+          <span class="acard-date">December 2025</span>
+          <a href="https://coursera.org/verify/professional-cert/1CFKCGJ4BN3W" target="_blank" class="acard-link">
+            Verify <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/IBM Cybersecurity Analyst.jpg" alt="IBM Cybersecurity Analyst" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
 
-        <!-- White Hats Masterclass -->
         <article class="achievement-card">
-          <i class="fas fa-shield-alt"></i>
-          <h3>The White Hats Committee – Masterclass Assistant</h3>
-          <p>Al Akhawayn University · Cybersecurity Club</p>
-          <span class="date">November 2023</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://drive.google.com/file/d/1nzmkmEiI3N0iVGCAmofEcmu75G3pe0Eq/view?usp=sharing"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View Masterclass Assistant certificate"
-            >
-              <img
-                src="images/The White Hats-Committee Masterclass Assistant.jpg"
-                alt="The White Hats Committee - Masterclass Assistant"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-user-shield"></i></div>
+            <span class="acard-badge">Professional Cert</span>
+          </div>
+          <h3>Google Cybersecurity</h3>
+          <p class="acard-issuer">Google · Coursera · 8 Courses</p>
+          <span class="acard-date">November 2024</span>
+          <a href="https://coursera.org/verify/professional-cert/X6W8ALFNPTEE" target="_blank" class="acard-link">
+            Verify <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/Google Cybersecurity Certification.png" alt="Google Cybersecurity" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
 
-        <!-- Programming for Everybody -->
         <article class="achievement-card">
-          <i class="fas fa-code"></i>
-          <h3>Programming for Everybody (Getting Started with Python)</h3>
-          <p>University of Michigan · Coursera</p>
-          <span class="date">January 2024</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/PFVV8ZP6W3Z9"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View Programming for Everybody certificate"
-            >
-              <img
-                src="images/University of Michigan - Programming for Everybody Getting Started with Python (1).jpg"
-                alt="Programming for Everybody - Getting Started with Python"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-laptop-code"></i></div>
+            <span class="acard-badge">Professional Cert</span>
+          </div>
+          <h3>Google IT Support</h3>
+          <p class="acard-issuer">Google · Coursera · 5 Courses</p>
+          <span class="acard-date">May 2024</span>
+          <a href="https://coursera.org/verify/professional-cert/7GJPJCK35GKA" target="_blank" class="acard-link">
+            Verify <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/GOOGLE IT SUPPORT SPECIALIST CERTIFICATION.jpg" alt="Google IT Support" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
 
-        <!-- Problem Solving Using Computational Thinking (U Michigan) -->
         <article class="achievement-card">
-          <i class="fas fa-brain"></i>
-          <h3>Problem Solving Using Computational Thinking</h3>
-          <p>University of Michigan · Coursera</p>
-          <span class="date">January 2024</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/C7JQL4NE8RET"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View Problem Solving Using Computational Thinking certificate"
-            >
-              <img
-                src="images/University of Michigan - Problem Solving Using Computational Thinking.jpg"
-                alt="Problem Solving Using Computational Thinking - University of Michigan"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-brain"></i></div>
+            <span class="acard-badge">Course Cert</span>
           </div>
-        </article>
-
-        <!-- UPenn Computational Thinking -->
-        <article class="achievement-card">
-          <i class="fas fa-brain"></i>
           <h3>Computational Thinking for Problem Solving</h3>
-          <p>University of Pennsylvania · Coursera</p>
-          <span class="date">July 2024</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://www.coursera.org/account/accomplishments/verify/KXVHL45VSWKF"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View UPenn Computational Thinking certificate"
-            >
-              <img
-                src="images/university of pennsylvania - computational thinking for problem solving.jpg"
-                alt="Computational Thinking for Problem Solving - University of Pennsylvania"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <p class="acard-issuer">University of Pennsylvania · Coursera</p>
+          <span class="acard-date">July 2024</span>
+          <a href="https://coursera.org/verify/KXVHL45VSWKF" target="_blank" class="acard-link">
+            Verify <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/university of pennsylvania - computational thinking for problem solving.jpg" alt="UPenn Computational Thinking" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
 
-        <!-- Google IT Support -->
         <article class="achievement-card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Google IT Support Professional Certificate</h3>
-          <p>Google · Coursera</p>
-          <span class="date">May 2024</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://www.coursera.org/account/accomplishments/professional-cert/7GJPJCK35GKA"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View Google IT Support certificate"
-            >
-              <img
-                src="images/GOOGLE IT SUPPORT SPECIALIST CERTIFICATION.jpg"
-                alt="Google IT Support Professional Certificate"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-code"></i></div>
+            <span class="acard-badge">Course Cert</span>
+          </div>
+          <h3>Programming for Everybody (Python)</h3>
+          <p class="acard-issuer">University of Michigan · Coursera</p>
+          <span class="acard-date">January 2024</span>
+          <a href="https://coursera.org/verify/PFVV8ZP6W3Z9" target="_blank" class="acard-link">
+            Verify <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/University of Michigan - Programming for Everybody Getting Started with Python (1).jpg" alt="Michigan Python" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
 
-        <!-- Google Cybersecurity -->
         <article class="achievement-card">
-          <i class="fas fa-user-shield"></i>
-          <h3>Google Cybersecurity Professional Certificate</h3>
-          <p>Google · Coursera</p>
-          <span class="date">November 2024</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://www.coursera.org/account/accomplishments/professional-cert/X6W8ALFNPTEE"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View Google Cybersecurity certificate"
-            >
-              <img
-                src="images/Google Cybersecurity Certification.png"
-                alt="Google Cybersecurity Professional Certificate"
-                class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-brain"></i></div>
+            <span class="acard-badge">Course Cert</span>
+          </div>
+          <h3>Problem Solving Using Computational Thinking</h3>
+          <p class="acard-issuer">University of Michigan · Coursera</p>
+          <span class="acard-date">January 2024</span>
+          <a href="https://coursera.org/verify/C7JQL4NE8RET" target="_blank" class="acard-link">
+            Verify <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/University of Michigan - Problem Solving Using Computational Thinking.jpg" alt="Michigan Computational Thinking" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
 
-        
-        <!-- IBM Cybersecurity Analyst (completed) -->
         <article class="achievement-card">
-          <i class="fas fa-shield-virus"></i>
-          <h3>IBM Cybersecurity Analyst Professional Certificate</h3>
-          <p>IBM · Coursera</p>
-          <span class="date">December 2025</span>
-          <div class="cert-image-wrapper">
-            <a
-              href="https://www.coursera.org/account/accomplishments/specialization/1CFKCGJ4BN3W"
-              target="_blank"
-              class="cert-image-link"
-              aria-label="View IBM Cybersecurity Analyst Professional Certificate"
-            >
-              <img
-          src="images/IBM Cybersecurity Analyst.jpg"
-          alt="IBM Cybersecurity Analyst Professional Certificate"
-          class="cert-image"
-              />
-              <span class="overlay-badge">View Certificate</span>
-            </a>
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-trophy"></i></div>
+            <span class="acard-badge acard-badge--gold">Competition</span>
+          </div>
+          <h3>CTF Hacking Competition — Beginners</h3>
+          <p class="acard-issuer">1337 Coding School · Al Akhawayn University</p>
+          <span class="acard-date">November 2023</span>
+          <a href="https://drive.google.com/file/d/1aViwyibVDMZwHekpOjFMVSbdxt6ZDgm5/view" target="_blank" class="acard-link">
+            View <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/2023 CTF Hacking Competition - Beginners.jpg" alt="CTF Competition" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
           </div>
         </article>
+
+        <article class="achievement-card">
+          <div class="acard-top">
+            <div class="acard-icon"><i class="fas fa-hat-wizard"></i></div>
+            <span class="acard-badge">Accomplishment</span>
+          </div>
+          <h3>White Hats Committee — Masterclass Assistant</h3>
+          <p class="acard-issuer">Al Akhawayn University · Cybersecurity Club</p>
+          <span class="acard-date">November 2023</span>
+          <a href="https://drive.google.com/file/d/1nzmkmEiI3N0iVGCAmofEcmu75G3pe0Eq/view" target="_blank" class="acard-link">
+            View <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="cert-thumb-wrap">
+            <img src="images/The White Hats-Committee Masterclass Assistant.jpg" alt="White Hats Masterclass" class="cert-thumb" />
+            <div class="cert-thumb-overlay">View Certificate</div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- ===== SKILLS ===== -->
   <section id="skills" class="skills section">
     <div class="section-inner">
-      <h2>Technical Skills</h2>
+      <div class="section-header">
+        <span class="section-tag">// 05</span>
+        <h2>Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
       <div class="skills-grid">
+
         <article class="skill-card">
-          <i class="fas fa-headset"></i>
-          <h3>IT Support & Systems</h3>
-          <p>
-            Troubleshooting, hardware diagnostics, imaging, OS deployment,
-            and user support in university and business environments.
-          </p>
+          <div class="skill-icon"><i class="fas fa-headset"></i></div>
+          <h3>IT Support &amp; Systems</h3>
+          <p>Troubleshooting, hardware diagnostics, imaging, OS deployment, and user support in university and business environments.</p>
+          <div class="skill-tags">
+            <span>Windows</span><span>Linux</span><span>macOS</span><span>Active Directory</span>
+          </div>
         </article>
 
         <article class="skill-card">
-          <i class="fas fa-network-wired"></i>
-          <h3>Networking & Infrastructure</h3>
-          <p>
-            TCP/IP, routing and switching basics, Wi‑Fi configuration,
-            network segmentation, and general network troubleshooting.
-          </p>
+          <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Networking &amp; Infrastructure</h3>
+          <p>TCP/IP, routing and switching basics, Wi-Fi configuration, network segmentation, and general network troubleshooting.</p>
+          <div class="skill-tags">
+            <span>TCP/IP</span><span>DNS</span><span>DHCP</span><span>VLANs</span>
+          </div>
         </article>
 
         <article class="skill-card">
-          <i class="fas fa-user-shield"></i>
+          <div class="skill-icon"><i class="fas fa-user-shield"></i></div>
           <h3>Cybersecurity Fundamentals</h3>
-          <p>
-            Basic security principles, common attack types, secure configuration,
-            password policies, least privilege, and vulnerability management concepts.
-          </p>
+          <p>Security principles, common attack types, secure configuration, vulnerability management, SIEM tools, and incident response.</p>
+          <div class="skill-tags">
+            <span>SIEM</span><span>IDS/IPS</span><span>Wireshark</span><span>Nmap</span>
+          </div>
         </article>
 
         <article class="skill-card">
-          <i class="fas fa-code"></i>
-          <h3>Programming & Scripting</h3>
-          <p>
-            Beginner‑level Python for automation and small utilities, plus Linux
-            command line for system and security tasks.
-          </p>
+          <div class="skill-icon"><i class="fas fa-code"></i></div>
+          <h3>Programming &amp; Scripting</h3>
+          <p>Python for automation and security utilities, Linux command line for system and security tasks, and SQL basics.</p>
+          <div class="skill-tags">
+            <span>Python</span><span>Bash</span><span>SQL</span><span>Linux CLI</span>
+          </div>
         </article>
+
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fas fa-flag"></i></div>
+          <h3>CTF &amp; Ethical Hacking</h3>
+          <p>Capture the Flag competitions, basic penetration testing concepts, OSINT, cryptography challenges, and web exploitation basics.</p>
+          <div class="skill-tags">
+            <span>CTF</span><span>OSINT</span><span>Cryptography</span><span>Web Exploits</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h3>Virtualization &amp; Cloud</h3>
+          <p>Setting up and managing virtual machines, working with hypervisors and basic cloud security concepts.</p>
+          <div class="skill-tags">
+            <span>VirtualBox</span><span>VMware</span><span>Kali Linux</span><span>Cloud Basics</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- ===== CONTACT ===== -->
   <section id="contact" class="contact section">
     <div class="section-inner">
-      <h2>Get in Touch</h2>
-      <div class="contact-content">
-        <p class="contact-note">
-          Interested in collaborating, offering an internship, or just saying hi?
-          Email me at
-          <a href="mailto:othman.idrissi404@gmail.com">
-            othman.idrissi404@gmail.com
-          </a>
-          or use the form below.
-        </p>
+      <div class="section-header">
+        <span class="section-tag">// 06</span>
+        <h2>Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <p class="contact-intro">
+            Interested in collaborating, offering an internship, or just saying hi? I'm open to opportunities in IT support and cybersecurity. Let's connect.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:othman.idrissi404@gmail.com" class="clink">
+              <i class="fas fa-envelope"></i>
+              <span>othman.idrissi404@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/cyber-othmaneidrissi" target="_blank" class="clink">
+              <i class="fab fa-linkedin"></i>
+              <span>linkedin.com/in/cyber-othmaneidrissi</span>
+            </a>
+            <a href="https://github.com/OthmaneId9" target="_blank" class="clink">
+              <i class="fab fa-github"></i>
+              <span>github.com/OthmaneId9</span>
+            </a>
+          </div>
+        </div>
 
-        <form id="contact-form">
+        <form id="contact-form" class="contact-form">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name" required />
+            <label for="name">
+              <span class="form-label-prefix">&gt;</span> Name
+            </label>
+            <input id="name" type="text" placeholder="Your name" required autocomplete="off" />
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="Your email" required />
+            <label for="email">
+              <span class="form-label-prefix">&gt;</span> Email
+            </label>
+            <input id="email" type="email" placeholder="your@email.com" required autocomplete="off" />
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              placeholder="Your message"
-              required
-            ></textarea>
+            <label for="message">
+              <span class="form-label-prefix">&gt;</span> Message
+            </label>
+            <textarea id="message" placeholder="Type your message here..." required rows="5"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">
-            Send Message
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
           </button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
-    <div class="social-links">
-      <a
-        href="https://www.linkedin.com/in/cyber-othmaneidrissi"
-        target="_blank"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a
-        href="https://github.com/OthmaneId9"
-        target="_blank"
-        aria-label="GitHub"
-      >
-        <i class="fab fa-github"></i>
-      </a>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        <span class="footer-bracket">[</span> Othmane Idrissi · Cybersecurity Analyst <span class="footer-bracket">]</span>
+      </p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/cyber-othmaneidrissi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/OthmaneId9" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:othman.idrissi404@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
-    <p>&copy; 2025 Othmane Idrissi. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
